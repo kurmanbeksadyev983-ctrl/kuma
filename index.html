@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конструктор графиков</title>
+    <link rel="stylesheet" href="zaki.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>📊 Конструктор графиков</h1>
+
+    <div class="editor">
+        <h2>Настройки диаграммы</h2>
+
+        <label>Название графика:</label>
+        <input type="text" id="chartTitle"
+               value="Моя диаграмма">
+
+        <label>Тип диаграммы:</label>
+        <select id="chartType">
+            <option value="bar">Столбчатая</option>
+            <option value="line">Линейная</option>
+            <option value="pie">Круговая</option>
+            <option value="doughnut">Кольцевая</option>
+        </select>
+
+        <h3>Данные</h3>
+
+        <div id="dataContainer"></div>
+
+        <button onclick="addRow()">+ Добавить данные</button>
+
+        <label>Цвет диаграммы:</label>
+        <input type="color" id="chartColor" value="#4f46e5">
+
+        <button onclick="updateChart()">Обновить график</button>
+        <button onclick="exportHTML()">Экспорт HTML</button>
+    </div>
+
+    <div class="preview">
+        <h2>Предварительный просмотр</h2>
+        <canvas id="myChart"></canvas>
+    </div>
+</div>
+
+<script src="kuku.js"></script>
+</body>
+</html>
